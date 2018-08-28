@@ -1,0 +1,89 @@
+spring:
+  application:
+    name: d-rebate
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/spkitty?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    url: jdbc:mysql://211.157.159.619:3306/spkitty?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    username: root
+#    password: 123456
+    password: 5c15faccacf44346b725c39d79e02b73
+    initial-size: 5
+    min-idle: 5
+    max-active: 20
+    max-wait: 60000
+    validationQuery: SELECT 1 FROM DUAL
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 25200000
+    removeAbandoned: true
+    removeAbandonedTimeout: 1800
+    logAbandoned: true
+    connectionInitSqls: set names utf8mb4;
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 500
+    maxOpenPreparedStatements: 500
+    filters: slf4j
+  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${file.upload.dir}
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+#springfox.documentation.swagger.v2.host : app.mshoufu.com:18199
+# server
+server:
+  port: 8189
+  context-path: /
+#  zk
+zookeeper.servers: 127.0.0.1:2181
+# mybatis
+mybatis:
+  type-aliases-package: com.rebate.dao
+  mapper-locations: mapper/*Mapper.xml
+
+#  redis
+redis:
+  host: 127.0.0.1
+  port: 6379
+  maxTotal: 300
+  maxWaitMillis: 3000
+  dbIndex: 0
+
+#  todo:
+#weixin:
+#    appId: wxcc43473b78440414
+#    secret: c21deb3a56d16b708de074236a0763d3
+#    token: thisistoken
+#    aesKey: e2Rkc5iqE8vCt4UPJmQAwCXQIST6lyhKIs7yUMMG8R5
+#    oauthRedirectUrl: www.baidu.com
+#    oauthAfterRedirectUrl: http://e3c710aa.ngrok.io/wechat/portal/oauthAfter
+#    shopRedirectUrl: www.baidu.com
+
+logging:
+  level:
+    root: info
+    com.spkitty.dao: debug
+#  path: logs
+#  file: ${logging.path}/applyLog.applyLog
+#  pattern:
+#    file: %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+#    console: %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n
+
+management:
+  security:
+    enabled: false
+  port: 8090
