@@ -30,7 +30,7 @@ public class Swagger2 {
         pars.add(tokenPar.build());
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .groupName("cat-eye")
+                .groupName("d-rebate")
                 .genericModelSubstitutes(DeferredResult.class)
                 .useDefaultResponseMessages(false)  
                 .globalResponseMessage(RequestMethod.GET,customerResponseMessage())

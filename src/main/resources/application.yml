@@ -5,7 +5,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
 #    url: jdbc:mysql://127.0.0.1:3306/spkitty?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
-    url: jdbc:mysql://211.157.159.619:3306/spkitty?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    url: jdbc:mysql://211.157.159.69:3306/spkitty?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
     username: root
 #    password: 123456
     password: 5c15faccacf44346b725c39d79e02b73
