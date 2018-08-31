@@ -36,8 +36,8 @@ public class CatEyeApplicationTests {
 	public void getGoodsList() {
 		TaobaoClient client = new DefaultTaobaoClient("https://eco.taobao.com/router/rest", "23338490", "c6393c570bf2254118511b2800fee2fc");
 		TbkItemGetRequest req = new TbkItemGetRequest();
-//		req.setFields("num_iid,title,pict_url,small_images,reserve_price,zk_final_price,user_type,provcity,item_url,seller_id,volume,nick,tk_rate");
-		req.setFields("num_iid,title,tk_rate");
+		req.setFields("num_iid,title,pict_url,small_images,reserve_price,zk_final_price,user_type,provcity,item_url,seller_id,volume,nick,tk_rate");
+//		req.setFields("num_iid,title,tk_rate");
 		req.setQ("女装");
 //		req.setCat("16,18");
 //		req.setItemloc("杭州");
@@ -105,6 +105,7 @@ public class CatEyeApplicationTests {
 	 * 18492553
 	 * mm_29600904_4474024_14768975
 	 * mm_29600904_4474024_14768975:1535622729_120_521362265&pvid=12_123.113.252.71_3100_1535622716923
+	 * mm_29600904_4472044_18830150034:1535679210_280_101777045
 	 */
 	@Test
 	public void getGoodListByXPKId() {
@@ -112,8 +113,8 @@ public class CatEyeApplicationTests {
 		TbkUatmFavoritesItemGetRequest req = new TbkUatmFavoritesItemGetRequest();
 //		req.setPlatform(1L);
 //		req.setPageSize(20L);
-		req.setAdzoneId(14768975L);
-		req.setUnid("3456");
+		req.setAdzoneId(18830150034L);
+//		req.setUnid("3456");
 		req.setFavoritesId(18492553L);
 //		req.setPageNo(2L);
 		req.setFields("num_iid,title,pict_url,small_images,reserve_price,zk_final_price,user_type,provcity,item_url,seller_id,volume,nick,shop_title,zk_final_price_wap,event_start_time,event_end_time,tk_rate,status,type");
