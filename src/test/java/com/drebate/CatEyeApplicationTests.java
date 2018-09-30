@@ -106,6 +106,8 @@ public class CatEyeApplicationTests {
 	 * mm_29600904_4474024_14768975
 	 * mm_29600904_4474024_14768975:1535622729_120_521362265&pvid=12_123.113.252.71_3100_1535622716923
 	 * mm_29600904_4472044_18830150034:1535679210_280_101777045
+	 * 2:mm_29600904_4472044_18830150034:
+	 * app 2:mm_29600904_13584154_361980051:1536559423_129_209405609
 	 */
 	@Test
 	public void getGoodListByXPKId() {
@@ -113,7 +115,7 @@ public class CatEyeApplicationTests {
 		TbkUatmFavoritesItemGetRequest req = new TbkUatmFavoritesItemGetRequest();
 //		req.setPlatform(1L);
 //		req.setPageSize(20L);
-		req.setAdzoneId(18830150034L);
+		req.setAdzoneId(361980051L);
 //		req.setUnid("3456");
 		req.setFavoritesId(18492553L);
 //		req.setPageNo(2L);

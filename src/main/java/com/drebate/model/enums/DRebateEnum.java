@@ -2,7 +2,7 @@ package com.drebate.model.enums;
 
 
 /**
- * Created by bingj on 2018/3/28.
+ * Created by bingju on 2018/3/28.
  */
 public class DRebateEnum {
 
